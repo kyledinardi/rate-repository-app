@@ -1,13 +1,6 @@
 import { View } from 'react-native';
 import Text from '../Text';
-
-const formatNumber = (n) => {
-  if (n >= 1000) {
-    return `${Math.round(n / 100) / 10}k`;
-  }
-
-  return n;
-};
+import formatNumber from '../../utils/formatNumber';
 
 const ItemStats = ({ name, value }) => {
   return (

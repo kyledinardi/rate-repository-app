@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
   info: { display: 'flex', gap: 5 },
 
   language: {
-    color: 'white',
     backgroundColor: theme.colors.primary,
     padding: 5,
     borderRadius: 5,
@@ -23,7 +22,9 @@ const ItemHeader = ({ item }) => {
       <View style={styles.info}>
         <Text fontWeight={'bold'}>{item.fullName}</Text>
         <Text color={'textSecondary'}>{item.description}</Text>
-        <Text style={styles.language}>Language: {item.language}</Text>
+        <Text style={styles.language} color={'white'}>
+          Language: {item.language}
+        </Text>
       </View>
     </View>
   );
